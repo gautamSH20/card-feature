@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+header > h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+h1 > span {
+  font-weight: 400;
+}
+header > p {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  height: 100%;
+  width: 930px;
+}
+main > div {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: start;
+}
+
+.build {
+  border-top: 2px solid hsl(0, 78%, 62%);
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.sup {
+  border-top: 2px solid hsl(180, 62%, 55%);
+  grid-row: 2/4;
+}
+.cal {
+  border-top: 2px solid hsl(212, 86%, 64%);
+  grid-row: 2/4;
+}
+.karma {
+  border-top: 2px solid hsl(34, 97%, 64%);
+  grid-row: 3/5;
+}
+
+.content {
+  margin: 10px;
+  margin-bottom: 0;
+}
+.content > header {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: 200;
+}
+.content > img {
+  margin-left: 75%;
+  position: static;
+  height: 50px;
+  width: 50px;
+}
+
+@media (max-width: 375px) {
+  main {
+    margin-top: 50px;
+    width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .sup {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .build {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .karma {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .cal {
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
